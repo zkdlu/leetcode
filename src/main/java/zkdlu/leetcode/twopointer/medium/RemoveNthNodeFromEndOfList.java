@@ -1,9 +1,9 @@
-package zkdlu.leetcode.twopointer;
+package zkdlu.leetcode.twopointer.medium;
 
 import zkdlu.leetcode.Problem;
 
-public class MiddleOfTheLinkedList extends Problem {
-    public ListNode middleNode(ListNode head) {
+public class RemoveNthNodeFromEndOfList extends Problem {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         int nodeCount = 0;
         ListNode temp = head;
         while (temp != null) {
@@ -11,22 +11,35 @@ public class MiddleOfTheLinkedList extends Problem {
             temp = temp.next;
         }
 
+        if (nodeCount == n) {
+            return head.next;
+        }
+
         temp = head;
-        for (int i = 0; i < nodeCount / 2; i++) {
+        ListNode prev = head;
+        for (int i = 0; i < nodeCount - n; i++) {
+            prev = temp;
             temp = temp.next;
         }
 
-        return temp;
+        prev.next = temp.next;
+
+        return head;
     }
 
     @Override
     public void run() {
         ListNode input = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-        ListNode output = middleNode(input);
+        ListNode output = removeNthFromEnd(input, 2);
+
+//        printNodes(output);
+
+
+        input = new ListNode(1);
+        output = removeNthFromEnd(input, 1);
 
         printNodes(output);
     }
-
     private void printNodes(ListNode output) {
         ListNode temp = output;
         while (temp != null) {

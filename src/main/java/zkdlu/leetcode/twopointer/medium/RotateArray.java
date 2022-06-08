@@ -1,4 +1,4 @@
-package zkdlu.leetcode.twopointer;
+package zkdlu.leetcode.twopointer.medium;
 
 import zkdlu.leetcode.Problem;
 
