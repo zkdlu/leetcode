@@ -7,6 +7,9 @@ public abstract class Problem {
 
     public abstract void run();
 
+    public void print(int num) {
+        System.out.println("num = " + num);
+    }
     public void print(String str) {
         System.out.println(str);
     }
