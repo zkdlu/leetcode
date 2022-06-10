@@ -1,9 +1,9 @@
-package zkdlu.leetcode;
+package zkdlu.utils;
 
 import java.util.Arrays;
 import java.util.StringJoiner;
 
-public class Utils {
+public class PrintUtils {
 
     public static void prints(char... chars) {
         printArray(chars);

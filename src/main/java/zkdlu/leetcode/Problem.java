@@ -1,29 +1,31 @@
 package zkdlu.leetcode;
 
+import zkdlu.utils.PrintUtils;
+
 public abstract class Problem {
 
     public abstract void run();
 
     public void print(int num) {
-        Utils.print(num);
+        PrintUtils.print(num);
     }
     public void print(String str) {
-        Utils.print(str);
+        PrintUtils.print(str);
     }
 
     public void printArray(int[] array) {
-        Utils.printArray(array);
+        PrintUtils.printArray(array);
     }
 
     public void printArray(char[] array) {
-        Utils.printArray(array);
+        PrintUtils.printArray(array);
     }
 
     public void printArray(double[] array) {
-        Utils.printArray(array);
+        PrintUtils.printArray(array);
     }
 
     public void printArray(Object[] array) {
-        Utils.printArray(array);
+        PrintUtils.printArray(array);
     }
 }
