@@ -1,41 +1,29 @@
 package zkdlu.leetcode;
 
-import java.util.Arrays;
-import java.util.StringJoiner;
-
 public abstract class Problem {
 
     public abstract void run();
 
     public void print(int num) {
-        System.out.println("num = " + num);
+        Utils.print(num);
     }
     public void print(String str) {
-        System.out.println(str);
+        Utils.print(str);
     }
 
     public void printArray(int[] array) {
-        printArray(Arrays.stream(array)
-                .boxed()
-                .toArray());
+        Utils.printArray(array);
     }
 
     public void printArray(char[] array) {
-        printArray(new String(array).split(""));
+        Utils.printArray(array);
     }
 
     public void printArray(double[] array) {
-        printArray(Arrays.stream(array)
-                .boxed()
-                .toArray());
+        Utils.printArray(array);
     }
 
     public void printArray(Object[] array) {
-        StringJoiner joiner = new StringJoiner(",");
-        for (Object obj: array) {
-            joiner.add(obj.toString());
-        }
-
-        System.out.println("[" + joiner.toString() + "]");
+        Utils.printArray(array);
     }
 }
